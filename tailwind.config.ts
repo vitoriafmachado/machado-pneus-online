@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Oswald", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Playfair Display", "serif"],
+        body: ["DM Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,8 +53,8 @@ export default {
         },
         brand: {
           dark: "hsl(var(--brand-dark))",
-          yellow: "hsl(var(--brand-yellow))",
-          red: "hsl(var(--brand-red))",
+          blue: "hsl(var(--brand-blue))",
+          gold: "hsl(var(--brand-gold))",
         },
         whatsapp: "hsl(var(--whatsapp))",
         sidebar: {
@@ -83,18 +83,18 @@ export default {
           to: { height: "0" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-15px) rotate(3deg)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(142 70% 40% / 0.4)" },
-          "50%": { boxShadow: "0 0 40px hsl(142 70% 40% / 0.7)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(142 70% 40% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(142 70% 40% / 0.6)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 3s ease-in-out infinite",
+        "float": "float 4s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
