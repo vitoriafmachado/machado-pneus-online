@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Playfair Display", "serif"],
-        body: ["DM Sans", "sans-serif"],
+        heading: ["Syne", "sans-serif"],
+        body: ["Space Grotesk", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -55,6 +55,7 @@ export default {
           dark: "hsl(var(--brand-dark))",
           blue: "hsl(var(--brand-blue))",
           gold: "hsl(var(--brand-gold))",
+          orange: "hsl(var(--brand-orange))",
         },
         whatsapp: "hsl(var(--whatsapp))",
         sidebar: {
@@ -90,12 +91,22 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px hsl(142 70% 40% / 0.3)" },
           "50%": { boxShadow: "0 0 40px hsl(142 70% 40% / 0.6)" },
         },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "marquee": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 4s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "spin-slow": "spin-slow 20s linear infinite",
+        "marquee": "marquee 20s linear infinite",
       },
     },
   },

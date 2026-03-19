@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Axe } from "lucide-react";
+import machadoIcon from "@/assets/machado-icon.png";
 
 const WHATSAPP_LINK = "https://wa.me/5531973011770?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20pneus.";
 
@@ -15,10 +16,17 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Pronto para <span className="italic text-brand-gold">rodar</span>?
+            <div className="inline-flex items-center gap-2 bg-background/5 border border-background/10 rounded-full px-4 py-2 mb-6">
+              <Axe className="w-4 h-4 text-primary" />
+              <span className="text-background/50 text-xs font-medium uppercase tracking-[0.2em]">
+                Fale conosco
+              </span>
+            </div>
+
+            <h2 className="font-heading text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
+              Pronto para <span className="text-primary">rodar</span>?
             </h2>
-            <p className="text-background/50 text-lg mb-8 max-w-md mx-auto">
+            <p className="text-background/40 text-lg mb-8 max-w-md mx-auto font-light">
               Entre em contato e encontre o pneu ideal para o seu veículo
             </p>
             <motion.a
@@ -37,16 +45,17 @@ const Footer = () => {
       </div>
 
       {/* Footer info */}
-      <div className="container py-10">
+      <div className="container py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
-              <span className="font-heading text-primary-foreground text-xs font-bold italic">MP</span>
+          <div className="flex items-center gap-2.5">
+            <img src={machadoIcon} alt="Machado Pneus" className="w-7 h-7 object-contain brightness-0 invert opacity-70" />
+            <div className="leading-tight">
+              <span className="font-heading text-sm font-bold uppercase">Machado Pneus</span>
+              <span className="block text-[9px] text-background/40 uppercase tracking-[0.2em]">Contagem — MG</span>
             </div>
-            <span className="font-heading text-lg font-bold">Machado Pneus</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-background/50">
+          <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-background/40">
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Contagem — MG
             </span>
@@ -55,8 +64,8 @@ const Footer = () => {
             </span>
           </div>
 
-          <p className="text-background/30 text-sm">
-            © {new Date().getFullYear()} Machado Pneus
+          <p className="text-background/20 text-xs">
+            © {new Date().getFullYear()} Machado Pneus Contagem
           </p>
         </div>
       </div>
