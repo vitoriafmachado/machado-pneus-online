@@ -4,7 +4,7 @@ Projeto desenvolvido para representar digitalmente a loja Machado Pneus, localiz
 
 Atualmente, o sistema tem como foco ser um portfólio da loja, apresentando seus produtos, medidas disponíveis e a história do negócio. Futuramente, o objetivo é evoluir para uma plataforma completa de vendas online.
 
-Sobre a loja
+<details> <summary><strong>Sobre a loja</strong></summary>
 
 A Machado Pneus é uma loja especializada na venda de pneus, com atuação baseada em confiança, atendimento direto e preços acessíveis.
 
@@ -12,11 +12,10 @@ Localizada em Contagem, Minas Gerais, a empresa vem construindo sua trajetória 
 
 Este projeto busca levar essa presença para o ambiente digital.
 
-Objetivo do projeto
+</details>
+<details> <summary><strong>Objetivo do projeto</strong></summary>
 
-O projeto foi criado com dois focos principais:
-
-Atual (Portfólio):
+<strong>Atual (Portfólio):</strong>
 
 Apresentação da loja
 
@@ -26,7 +25,9 @@ Divulgação da história do negócio
 
 Presença digital
 
-Futuro (E-commerce):
+<br>
+
+<strong>Futuro (E-commerce):</strong>
 
 Implementação de vendas online
 
@@ -36,7 +37,8 @@ Integração com meios de pagamento
 
 Gestão de pedidos
 
-Tecnologias utilizadas
+</details>
+<details> <summary><strong>Tecnologias utilizadas</strong></summary>
 
 HTML
 
@@ -46,7 +48,8 @@ JavaScript
 
 React (Vite)
 
-Funcionalidades atuais
+</details>
+<details> <summary><strong>Funcionalidades atuais</strong></summary>
 
 Página institucional da loja
 
@@ -56,7 +59,8 @@ Interface responsiva
 
 Estrutura preparada para expansão
 
-Próximas implementações
+</details>
+<details> <summary><strong>Próximas implementações</strong></summary>
 
 Carrinho de compras
 
@@ -68,18 +72,23 @@ Sistema de pedidos
 
 Automação de atendimento
 
-Visão do projeto
+</details>
+<details> <summary><strong>Visão do projeto</strong></summary>
 
 Este projeto representa a transformação de um negócio físico em presença digital, com potencial de crescimento e escalabilidade.
 
 A proposta é fortalecer a marca Machado Pneus também no ambiente online, ampliando seu alcance e oportunidades.
 
-Responsável pelo projeto
+</details>
+<details> <summary><strong>Responsável pelo projeto</strong></summary>
 
 Vitória Machado
 Estudante de Engenharia de Software
 Foco em desenvolvimento Front-End
 
-Status
+</details>
+<details> <summary><strong>Status</strong></summary>
 
 Em desenvolvimento contínuo
+
+</details>
