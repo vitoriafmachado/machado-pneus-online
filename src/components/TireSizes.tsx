@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import tireImg from "@/assets/tire.png";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowUpRight } from "lucide-react";
 
 const WHATSAPP_BASE = "https://wa.me/5531973011770?text=";
 
@@ -21,15 +21,14 @@ const cardVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const },
+    transition: { delay: i * 0.06, duration: 0.5, ease: "easeOut" as const },
   }),
 };
 
 const TireSizes = () => {
   return (
     <section id="medidas" className="py-20 md:py-32 bg-background relative">
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--primary)/0.04)_1px,transparent_1px)] bg-[size:20px_20px]" />
 
       <div className="container relative z-10">
         <motion.div
@@ -39,18 +38,18 @@ const TireSizes = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-body text-sm font-semibold uppercase tracking-[0.3em] mb-4 block">
-            Catálogo
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+            Catálogo 2026
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold">
-            Escolha a <span className="italic text-primary">medida</span>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+            Escolha a <span className="text-gradient">medida</span>
           </h2>
-          <p className="text-muted-foreground mt-4 text-lg max-w-md mx-auto">
-            Selecione o aro do seu veículo e fale direto com a gente pelo WhatsApp
+          <p className="text-muted-foreground mt-4 text-lg max-w-md mx-auto font-light">
+            Selecione o aro e fale direto com a gente pelo WhatsApp
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sizes.map((size, i) => {
             const msg = encodeURIComponent(
               `Olá! Gostaria de ver pneus ARO ${size.aro}. Pode me ajudar?`
@@ -63,29 +62,35 @@ const TireSizes = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={cardVariants}
-                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 href={`${WHATSAPP_BASE}${msg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
+                className="group relative bg-card rounded-2xl p-5 border border-border hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-400 overflow-hidden"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors duration-300">
+                {/* Hover gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors duration-300">
                     <img
                       src={tireImg}
                       alt={`Pneu ARO ${size.aro}`}
-                      className="w-14 h-14 object-contain group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"
+                      className="w-11 h-11 object-contain group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-heading text-3xl font-bold text-foreground mb-1">
-                      ARO {size.aro}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{size.cars}</p>
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-heading text-2xl font-bold text-foreground">
+                        ARO {size.aro}
+                      </h3>
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mt-0.5">{size.cars}</p>
                   </div>
                 </div>
 
-                <div className="mt-5 flex items-center justify-center gap-2 bg-whatsapp/10 text-whatsapp py-3 rounded-xl font-medium text-sm group-hover:bg-whatsapp group-hover:text-primary-foreground transition-all duration-300">
+                <div className="relative mt-4 flex items-center justify-center gap-2 bg-whatsapp/10 text-whatsapp py-2.5 rounded-xl font-medium text-sm group-hover:bg-whatsapp group-hover:text-primary-foreground transition-all duration-300">
                   <MessageCircle className="w-4 h-4" />
                   Consultar preço
                 </div>

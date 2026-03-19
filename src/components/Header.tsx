@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Menu, X } from "lucide-react";
+import machadoIcon from "@/assets/machado-icon.png";
 
 const WHATSAPP_LINK = "https://wa.me/5531973011770?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20pneus.";
 
@@ -19,16 +20,14 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50"
+      className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/30"
     >
-      <div className="container flex items-center justify-between py-4">
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <span className="font-heading text-primary-foreground text-sm font-bold italic">MP</span>
-          </div>
-          <div className="leading-none">
-            <span className="font-heading text-lg font-bold tracking-wide text-foreground">Machado</span>
-            <span className="font-heading text-lg font-bold tracking-wide text-primary ml-1">Pneus</span>
+      <div className="container flex items-center justify-between py-3">
+        <a href="#" className="flex items-center gap-2.5 group">
+          <img src={machadoIcon} alt="Machado Pneus" className="w-9 h-9 object-contain group-hover:scale-110 transition-transform duration-300" />
+          <div className="leading-tight">
+            <span className="font-heading text-base font-bold tracking-tight text-foreground uppercase">Machado Pneus</span>
+            <span className="block text-[10px] font-body text-muted-foreground uppercase tracking-[0.25em]">Contagem — MG</span>
           </div>
         </a>
 
@@ -68,7 +67,7 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden border-t border-border/50"
+            className="md:hidden overflow-hidden border-t border-border/30"
           >
             <div className="container py-4 flex flex-col gap-4">
               {navItems.map((item) => (
